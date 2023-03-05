@@ -10,15 +10,12 @@ def CreateUsers():
     while True:
         ########## Write the line of code that will call function GetUserName and assign the return value to username
         username = GetUserName()
-        return username
         if (username.upper() == "END"):
             break
         ########## Write the line of code that will call function GetUserPassword and assign the return value to userpwd
         userpwd = GetUserPassword()
-        return userpwd
         ########## Write the line of code that will call function GetUserRole() and assign the return value to userrole
         userrole = GetUserRole()
-        return userrole
         UserDetail = username + "|" + userpwd + "|" + userrole + "\n"  
         UserFile.write(UserDetail)
     # close file to save data
@@ -32,7 +29,7 @@ def GetUserName():
     return username
 def GetUserPassword():
     ##### write the code to enter the pwd and return pwd
-    pwd = input('Enter the password: ')
+    pwd = input('Enter password: ')
     return pwd
 def GetUserRole():
      userrole = input("Enter role (Admin or User): ")
@@ -166,11 +163,11 @@ def PrintTotals(EmpTotals):
 if __name__ == "__main__":
     ##################################################
     ########## Write the line of code to call the method CreateUsers
-    CreateUsers = []
+    CreateUsers()
     print()
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
-    Login = Login(UserRole, UserName)
+    Login = []
     DetailsPrinted = False  ###
     EmpTotals = {} ###
     ########## Write the if statement that will check to see if UserRole is equal to NONE (NOTE: code will show red error lines until this line is written)
