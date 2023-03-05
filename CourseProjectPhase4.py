@@ -163,21 +163,21 @@ def PrintTotals(EmpTotals):
 if __name__ == "__main__":
     ##################################################
     ########## Write the line of code to call the method CreateUsers
-    CreateUsers()
+    CreateUsers = CreateUsers()
     print()
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
-    Login = []
+    Login = [GetUserRole(), GetUserName()]
     DetailsPrinted = False  ###
     EmpTotals = {} ###
     ########## Write the if statement that will check to see if UserRole is equal to NONE (NOTE: code will show red error lines until this line is written)
-    if UserRole == "NONE":
+    if GetUserRole() == "NONE":
         print(UserName," is invalid.")
     else:
     # only admin users can enter data
         ##### write the if statement that will check to see if the UserRole is equal to ADMIN (NOTE: code will show red error lines until this line is written)
         
-        if UserRole == "ADMIN":
+        if GetUserRole() == "ADMIN":
             EmpFile = open("Employees.txt", "a+")                
             while True:
                 empname = GetEmpName()
