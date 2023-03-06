@@ -6,7 +6,7 @@ from datetime import datetime
 def CreateUsers():
     print('##### Create users, passwords, and roles #####')
     ########## Open the file user.txt in append mode and assign to UserFile
-    UserFile = open("user.txt", "a")
+    UserFile = open("User.txt", "a")
     while True:
         ########## Write the line of code that will call function GetUserName and assign the return value to username
         username = GetUserName()
@@ -163,11 +163,11 @@ def PrintTotals(EmpTotals):
 if __name__ == "__main__":
     ##################################################
     ########## Write the line of code to call the method CreateUsers
-    CreateUsers()
+    main = CreateUsers()
     print()
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
-    UserRole, UserName = Login()
+    Login = CreateUsers(UserRole, UserName)
     DetailsPrinted = False  ###
     EmpTotals = {} ###
     ########## Write the if statement that will check to see if UserRole is equal to NONE (NOTE: code will show red error lines until this line is written)
@@ -190,6 +190,6 @@ if __name__ == "__main__":
                 EmpDetail = fromdate + "|" + todate  + "|" + empname  + "|" + str(hours)  + "|" + str(hourlyrate)  + "|" + str(taxrate) + "\n"  
                 EmpFile.write(EmpDetail)
         # close file to save data
-            EmpFile.close()    
-            printinfo(DetailsPrinted)
+                EmpFile.close()    
+        printinfo(DetailsPrinted)
 
