@@ -163,7 +163,7 @@ def PrintTotals(EmpTotals):
 if __name__ == "__main__":
     ##################################################
     ########## Write the line of code to call the method CreateUsers
-    main = CreateUsers()
+    CreateUsers()
     print()
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
